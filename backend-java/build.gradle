@@ -10,6 +10,7 @@ jar {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
 
 java {
 	toolchain {
@@ -33,6 +34,13 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+	// https://mvnrepository.com/artifact/com.h2database/h2
+	testImplementation 'com.h2database:h2:2.2.224'
+// https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+	implementation 'com.mysql:mysql-connector-j:8.3.0'
+
 }
 
 tasks.named('test') {
